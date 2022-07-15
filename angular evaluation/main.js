@@ -6,7 +6,7 @@
     .then(idData => {
         console.log(idData)
        let id = idData
-       console.log(id)
+       
        showData(id)
     })
 
@@ -19,7 +19,7 @@
 
     const movieUl = document.querySelector('.movie__container')
     let template = ""; //li template
-    id // represents item
+    id // move data
       .sort((a, b) => b.id - a.id) // compare function a n b/ ids below in delete function
       .forEach((item) => {
        console.log(item)
@@ -28,7 +28,7 @@
                 <p class="p__name">${item.name}</p> 
                 <p class="p__info">${item.outlineInfo}</p>
                 </li>
-            `; //// add edit function to update the text patch or put
+            `; 
       });
 
     movieUl.innerHTML = template;
@@ -36,13 +36,13 @@
  
  //* Function for scrolling
  function buttonScroll (){
-    const ul = document.querySelector('.movie__container')
-    var scrollAmount = 0;
-    var scrollMin = 0
-    var scrollMax = 50;
+    const movieUl = document.querySelector('.movie__container')
+    let scrollAmount = 0;
+    let scrollMin = 0
+    let scrollMax = 50;
     
     document.querySelector('.right__button').onclick = function () {
-       ul.scrollTo({
+       movieUl.scrollTo({
          top: 0,
          left: Math.max(scrollAmount += 500, scrollMax),
          behavior: 'smooth'
@@ -50,11 +50,11 @@
      };
    
      document.querySelector('.left__button').onclick = function () {
-       ul.scrollTo({
+       movieUl.scrollTo({
          top: 0,
          left: Math.min(scrollAmount -= 500, scrollMin),
          behavior: 'smooth'
        });
      }; 
  }
- buttonScroll()
+ buttonScroll();

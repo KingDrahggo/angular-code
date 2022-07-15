@@ -1,74 +1,85 @@
-html,body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-body{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
 }
-ul{
-    background-color: greenyellow;
-    width: 800px;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: hidden;
-    margin: 0;
+ul {
+  background-color: greenyellow;
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: space-between;
+  overflow: hidden;
+  margin: 0;
+  box-shadow: 2px 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+ul > li {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  position: relative;
+  top: 20px;
+  right: 40px;
 }
 
-ul > li{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    position: relative;
-    top: 20px;
-    right: 40px;
+ul > li > img {
+  width: 200px;
+  border-radius: 10px;
 }
-
-ul > li >img{
-   width: 200px;
-   border-radius: 10px;
-}
+ul > li > img:hover {
+    width: 210px;
+    transition: all ease-in 0.3s;
+  }
 
 ul > li > p {
- font-size: 15px;
+  font-size: 15px;
 }
-ul > li > .p__name{
-    display: flex;
-    position: relative;
-    bottom: 15px;
+ul > li > .p__name {
+  display: flex;
+  position: relative;
+  bottom: 15px;
 }
-ul > li > .p__info{
-    display: flex;
-    position: relative;
-    bottom: 30px; 
-}
-
-button{
-    display: flex;
-    flex-direction: row;
-    position: relative;
+ul > li > .p__info {
+  display: flex;
+  position: relative;
+  bottom: 30px;
 }
 
-.right__button{
-    display: flex;
-    position: relative;
-    left: 95%;
-    bottom: 23.5vh;
+button {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 15px;
 }
 
-.left__button{
-    display: flex;
-    position: relative;
-    right: 0%;
-    bottom: 21vh;
+.right__button {
+  display: flex;
+  position: relative;
+  left: 98%;
+  bottom: 27vh;
 }
 
-
+.left__button {
+  display: flex;
+  position: relative;
+  right: 2%;
+  bottom: 23.5vh;
+}
